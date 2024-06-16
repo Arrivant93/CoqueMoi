@@ -33,7 +33,7 @@ const Page = async () => {
 
   const commandes = await db.commande.findMany({
     where: {
-      IsPaid: true,
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
@@ -49,7 +49,7 @@ const Page = async () => {
 
   const lastWeekSum = await db.commande.aggregate({
     where: {
-      IsPaid: true,
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 7)),
       },
@@ -61,7 +61,7 @@ const Page = async () => {
 
   const lastMonthSum = await db.commande.aggregate({
     where: {
-      IsPaid: true,
+      isPaid: true,
       createdAt: {
         gte: new Date(new Date().setDate(new Date().getDate() - 30)),
       },
@@ -147,7 +147,7 @@ const Page = async () => {
                   <TableCell className="hidden sm:table-cell">
                     <StatusDropdown
                       id={commande.id}
-                      orderStatus={commande.status}
+                      commandeStatus={commande.status}
                     />
                   </TableCell>
                   <TableCell className="hidden md:table-cell">
