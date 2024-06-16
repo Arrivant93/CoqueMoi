@@ -42,6 +42,6 @@ export function constructMetadata({
       creator: '@Arrivant',
     },
     icons,
-    metadataBase: new URL(" ")  //adresse vercel
+    //metadataBase: new URL(" ")  //adresse vercel
   }
 }
