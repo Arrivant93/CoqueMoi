@@ -6,7 +6,7 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 import OrderReceivedEmail from "@/components/emails/OrderReceivedEmail";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -71,24 +71,24 @@ export async function POST(req: Request) {
         },
       });
 
-      await resend.emails.send({
-        from: "CoqueMoi <m.zeboudj@cfa-insta.fr>",
-        to: [event.data.object.customer_details.email],
-        subject: "Merci de votre commande!",
-        react: OrderReceivedEmail({
-          commandeId,
-          commandeDate: updatedCommande.createdAt.toLocaleDateString(),
-          // @ts-ignore
-          adresseLivraison: {
-            name: session.customer_details!.name!,
-            city: adresseLivraison!.city!,
-            country: adresseLivraison!.country!,
-            codepostal: adresseLivraison!.postal_code!,
-            street: adresseLivraison!.line1!,
-            state: adresseLivraison!.state,
-          },
-        }),
-      });
+      // await resend.emails.send({
+      //   from: "CoqueMoi <m.zeboudj@cfa-insta.fr>",
+      //   to: [event.data.object.customer_details.email],
+      //   subject: "Merci de votre commande!",
+      //   react: OrderReceivedEmail({
+      //     commandeId,
+      //     commandeDate: updatedCommande.createdAt.toLocaleDateString(),
+      //     // @ts-ignore
+      //     adresseLivraison: {
+      //       name: session.customer_details!.name!,
+      //       city: adresseLivraison!.city!,
+      //       country: adresseLivraison!.country!,
+      //       codepostal: adresseLivraison!.postal_code!,
+      //       street: adresseLivraison!.line1!,
+      //       state: adresseLivraison!.state,
+      //     },
+      //   }),
+      // });
     }
 
     return NextResponse.json({ result: event, ok: true });
