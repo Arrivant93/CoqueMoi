@@ -55,7 +55,7 @@ const Page = async () => {
       },
     },
     _sum: {
-      montant: true,
+      amount: true,
     },
   });
 
@@ -67,7 +67,7 @@ const Page = async () => {
       },
     },
     _sum: {
-      montant: true,
+      amount: true,
     },
   });
 
@@ -83,7 +83,7 @@ const Page = async () => {
               <CardHeader className="pb-2">
                 <CardDescription>Last Week</CardDescription>
                 <CardTitle className="text-4xl">
-                  {formatPrice(lastWeekSum._sum.montant ?? 0)}
+                  {formatPrice(lastWeekSum._sum.amount ?? 0)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -93,7 +93,7 @@ const Page = async () => {
               </CardContent>
               <CardFooter>
                 <Progress
-                  value={((lastWeekSum._sum.montant ?? 0) * 100) / WEEKLY_GOAL}
+                  value={((lastWeekSum._sum.amount ?? 0) * 100) / WEEKLY_GOAL}
                 />
               </CardFooter>
             </Card>
@@ -101,7 +101,7 @@ const Page = async () => {
               <CardHeader className="pb-2">
                 <CardDescription>Last Month</CardDescription>
                 <CardTitle className="text-4xl">
-                  {formatPrice(lastMonthSum._sum.montant ?? 0)}
+                  {formatPrice(lastMonthSum._sum.amount ?? 0)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -111,9 +111,7 @@ const Page = async () => {
               </CardContent>
               <CardFooter>
                 <Progress
-                  value={
-                    ((lastMonthSum._sum.montant ?? 0) * 100) / MONTHLY_GOAL
-                  }
+                  value={((lastMonthSum._sum.amount ?? 0) * 100) / MONTHLY_GOAL}
                 />
               </CardFooter>
             </Card>
@@ -154,7 +152,7 @@ const Page = async () => {
                     {commande.createdAt.toLocaleDateString()}
                   </TableCell>
                   <TableCell className="text-right">
-                    {formatPrice(commande.montant)}
+                    {formatPrice(commande.amount)}
                   </TableCell>
                 </TableRow>
               ))}

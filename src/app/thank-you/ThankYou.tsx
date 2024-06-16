@@ -46,7 +46,7 @@ const ThankYou = () => {
     );
   }
 
-  const { configuration, facturationAdresse, adresseLivraison, montant } = data;
+  const { configuration, facturationAdresse, adresseLivraison, amount } = data;
   const { color } = configuration;
 
   return (
@@ -139,7 +139,7 @@ const ThankYou = () => {
         <div className="space-y-6 border-t border-zinc-200 pt-10 text-sm">
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Sous-total</p>
-            <p className="text-zinc-700">{formatPrice(montant)}</p>
+            <p className="text-zinc-700">{formatPrice(amount)}</p>
           </div>
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Livraison</p>
@@ -147,7 +147,7 @@ const ThankYou = () => {
           </div>
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Total</p>
-            <p className="text-zinc-700">{formatPrice(montant)}</p>
+            <p className="text-zinc-700">{formatPrice(amount)}</p>
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ export const createCheckoutSession = async ({
   } else {
     commande = await db.commande.create({
       data: {
-        montant: price / 100,
+        amount: price / 100,
         userId: user.id,
         configurationId: configuration.id,
       },
