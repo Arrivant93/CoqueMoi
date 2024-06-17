@@ -28,7 +28,7 @@ const Navbar = async () => {
 
                 {isAdmin ? (
                   <Link
-                    href="/dashboard'"
+                    href="/dashboard"
                     className={buttonVariants({ size: "sm", variant: "ghost" })}
                   >
                     Tableau de bord ✨
