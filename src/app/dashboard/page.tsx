@@ -81,14 +81,14 @@ const Page = async () => {
           <div className="grid gap-4 sm:grid-cols-2">
             <Card>
               <CardHeader className="pb-2">
-                <CardDescription>Last Week</CardDescription>
+                <CardDescription>La semaine dernière</CardDescription>
                 <CardTitle className="text-4xl">
                   {formatPrice(lastWeekSum._sum.amount ?? 0)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-sm text-muted-foreground">
-                  of {formatPrice(WEEKLY_GOAL)} goal
+                de {formatPrice(WEEKLY_GOAL)} l'objectif
                 </div>
               </CardContent>
               <CardFooter>
@@ -99,14 +99,14 @@ const Page = async () => {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardDescription>Last Month</CardDescription>
+                <CardDescription>Le mois dernier</CardDescription>
                 <CardTitle className="text-4xl">
                   {formatPrice(lastMonthSum._sum.amount ?? 0)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-sm text-muted-foreground">
-                  of {formatPrice(MONTHLY_GOAL)} goal
+                  de {formatPrice(MONTHLY_GOAL)} l'objectif
                 </div>
               </CardContent>
               <CardFooter>
@@ -117,15 +117,15 @@ const Page = async () => {
             </Card>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight">Incoming orders</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Commandes entrantes</h1>
 
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Customer</TableHead>
-                <TableHead className="hidden sm:table-cell">Status</TableHead>
+                <TableHead>Client</TableHead>
+                <TableHead className="hidden sm:table-cell">Statut</TableHead>
                 <TableHead className="hidden sm:table-cell">
-                  Purchase date
+                Date d'achat
                 </TableHead>
                 <TableHead className="text-right">montant</TableHead>
               </TableRow>
