@@ -24,7 +24,7 @@ const OrderReceivedEmail = ({
   commandeDate: string;
 }) => {
   const baseUrl =
-    process.env.NODE_ENV === "development" ? "http://localhost:3000" : " "; ///adresse site
+    process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://coquemoi.vercel.app"; ///adresse site
 
   return (
     <Html>

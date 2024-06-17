@@ -12,7 +12,7 @@ export const getPaymentStatus = async ({
   const user = await getUser();
 
   if (!user?.id || !user.email) {
-    throw new Error("You need to be logged in to view this page.");
+    throw new Error("Vous devez être connecté pour voir cette page.");
   }
 
   const commande = await db.commande.findFirst({

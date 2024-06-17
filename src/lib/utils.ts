@@ -16,8 +16,8 @@ export const formatPrice = (price: number) => {
 }
 
 export function constructMetadata({
-  title = 'CoqueMoi - custom high-quality phone cases',
-  description = 'Create custom high-quality phone cases in seconds',
+  title = 'CoqueMoi - des étuis de téléphone personnalisés de haute qualité',
+  description = 'Créez des étuis de téléphone personnalisés de haute qualité en quelques secondes',
   image = '/oui.png',
   icons = '/bobicon.png',
 }: {

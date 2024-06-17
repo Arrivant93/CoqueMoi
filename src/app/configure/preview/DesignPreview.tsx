@@ -160,7 +160,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
               <Button
                 onClick={() => handleCheckout()}
                 className='px-4 sm:px-6 lg:px-8'>
-                Check out <ArrowRight className='h-4 w-4 ml-1.5 inline' />
+                Paiement <ArrowRight className='h-4 w-4 ml-1.5 inline' />
               </Button>
             </div>
           </div>
